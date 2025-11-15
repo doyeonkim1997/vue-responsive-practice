@@ -1,6 +1,6 @@
-# Vue 3 + TypeScript 기반 반응형 대시보드 실습 프로젝트
+# Vue3, TypeScript 기반 반응형 대시보드 실습 프로젝트
 
-![반응형 대시보드 실습 프로젝트 스크린샷](https://github.com/user-attachments/assets/61ef495b-ec33-4d22-8e70-485c79f9c3b3")
+![반응형 대시보드 실습 프로젝트 스크린샷]([https://github.com/user-attachments/assets/61ef495b-ec33-4d22-8e70-485c79f9c3b3"](https://github.com/user-attachments/assets/61ef495b-ec33-4d22-8e70-485c79f9c3b3)
 
 <p align="center">
 <a href="https://vue-responsive-practice.vercel.app/">
