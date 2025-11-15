@@ -27,7 +27,9 @@
         />
       </div>
 
-      <button class="px-4 py-2 bg-blue-600 text-white rounded">저장</button>
+      <button class="px-4 py-2 bg-blue-600 text-white rounded justify-center">
+        저장
+      </button>
     </section>
   </div>
 </template>
