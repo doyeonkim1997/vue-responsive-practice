@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Header from "@/components/common/Header.vue";
 import MobileSidebar from "@/components/common/MobileSidebar.vue";
+import Footer from "@/components/common/Footer.vue";
 import { ref } from "vue";
 
 const isMobileMenuOpen = ref(false);
@@ -27,5 +28,7 @@ const closeMenu = () => {
         <RouterView />
       </main>
     </div>
+
+    <Footer />
   </div>
 </template>
