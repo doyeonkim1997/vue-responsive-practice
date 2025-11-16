@@ -42,7 +42,7 @@ onMounted(() => {
         fill: false,
       },
       {
-        label: "평균 체류시간(초)",
+        label: "신규 회원가입수",
         data: [150, 160, 145, 155, 170, 175, 180],
         borderColor: "#F59E0B",
         tension: 0.4,

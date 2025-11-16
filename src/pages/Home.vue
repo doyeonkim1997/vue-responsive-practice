@@ -20,8 +20,8 @@ import VisitorLineChart from "@/components/charts/VisitorLineChart.vue";
         <p class="text-2xl font-semibold">12명</p>
       </div>
       <div class="bg-white p-5 rounded-lg shadow-sm border">
-        <h2 class="text-lg mb-2">평균 체류시간</h2>
-        <p class="text-2xl font-semibold">2분 45초</p>
+        <h2 class="text-lg mb-2">신규 회원가입수</h2>
+        <p class="text-2xl font-semibold">2명</p>
       </div>
     </section>
 
