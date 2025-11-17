@@ -1,51 +1,46 @@
-<template>
-  <!-- 
-    [수정됨]
-    차트를 감싸는 래퍼 div 추가 → 부모 영역에서만 꽉 차도록 제어
-  -->
-  <div class="relative w-full h-full">
-    <Chart
-      type="bar"
-      :data="chartData"
-      :options="chartOptions"
-      class="absolute inset-0"
-    />
-  </div>
-</template>
-
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import Chart from "primevue/chart";
 
-const chartData = ref({
-  labels: ["서버 A", "서버 B", "서버 C", "서버 D"],
-  datasets: [
-    {
-      label: "트래픽",
-      data: [140, 90, 120, 200],
-      backgroundColor: "#6366F1",
-    },
-  ],
-});
+const chartData = ref();
+const chartOptions = ref();
 
-const chartOptions = ref({
-  indexAxis: "y",
-  responsive: true,
-  maintainAspectRatio: false,
-  resizeDelay: 50,
-  plugins: {
-    legend: { display: false },
-  },
-  scales: {
-    x: { grid: { display: false } },
-    y: { grid: { display: false } },
-  },
+onMounted(() => {
+  const labels = ["월", "화", "수", "목", "금", "토", "일"];
+
+  chartData.value = {
+    labels,
+    datasets: [
+      {
+        label: "매출",
+        data: [120, 140, 150, 130, 160, 180, 200],
+        borderColor: "#4F46E5",
+        tension: 0.4,
+        fill: false,
+      },
+    ],
+  };
+
+  chartOptions.value = {
+    responsive: true,
+    maintainAspectRatio: false,
+    resizeDelay: 50,
+    plugins: {
+      legend: { labels: { color: "#374151" } },
+    },
+    scales: {
+      x: { ticks: { color: "#6B7280" }, grid: { color: "#E5E7EB" } },
+      y: { ticks: { color: "#6B7280" }, grid: { color: "#E5E7EB" } },
+    },
+  };
 });
 </script>
 
-<style scoped>
-/* 
-  [삭제됨] 기존 :deep(canvas) 강제 스타일은 제거
-  새 구조에선 필요 없음
-*/
-</style>
+<template>
+  <Chart
+    type="line"
+    :data="chartData"
+    :options="chartOptions"
+    class="w-full h-full"
+  />
+</template>
