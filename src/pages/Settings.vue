@@ -60,7 +60,6 @@ function saveProfile() {
       </div>
 
       <div class="flex justify-center pt-2">
-        ㅈ
         <button
           :disabled="!isValid"
           @click="saveProfile"
