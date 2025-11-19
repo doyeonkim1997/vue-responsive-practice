@@ -1,14 +1,20 @@
 <script setup lang="ts">
+import { ref, onMounted } from "vue";
+const isMobile = ref(false);
+
 defineProps({
   open: Boolean,
+});
+onMounted(() => {
+  isMobile.value = window.innerWidth < 1024; // lg 기준
 });
 
 defineEmits(["close"]);
 </script>
 
 <template>
-  <!-- 오픈 상태일 때만 렌더링 -->
-  <div v-if="open" class="lg:hidden fixed inset-0 z-50">
+  <!-- open이고, 모바일일 때만 렌더링 -->
+  <div v-if="open && isMobile" class="fixed inset-0 z-50">
     <!-- 배경 오버레이 -->
     <div class="fixed inset-0 bg-black/40" @click="$emit('close')"></div>
 
