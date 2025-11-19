@@ -80,9 +80,23 @@ onMounted(() => {
     <!-- 정상 상태-->
     <template v-else>
       <StatsGrid :cols="3">
-        <StatsCard label="매출" :value="`₩${stats.sales.toLocaleString()}원`" />
-        <StatsCard label="전환율" :value="`${stats.conversionRate}%`" />
-        <StatsCard label="평균 체류시간" :value="stats.avgStay" />
+        <StatsCard
+          label="매출"
+          :value="`₩${stats.sales.toLocaleString()}원`"
+          to="/sales"
+        />
+
+        <StatsCard
+          label="전환율"
+          :value="`${stats.conversionRate}%`"
+          to="/conversion"
+        />
+
+        <StatsCard
+          label="평균 체류시간"
+          :value="stats.avgStay"
+          to="/avg-stay"
+        />
       </StatsGrid>
 
       <ChartCard>
