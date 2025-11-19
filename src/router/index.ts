@@ -15,6 +15,22 @@ const routes = [
       { path: "dashboard", name: "Dashboard", component: Dashboard },
       { path: "settings", name: "Settings", component: Settings },
       {
+        path: "sales",
+        name: "SalesDetail",
+        component: () => import("@/pages/SalesDetail.vue"),
+      },
+      {
+        path: "conversion",
+        name: "ConversionDetail",
+        component: () => import("@/pages/ConversionDetail.vue"),
+      },
+      {
+        path: "avg-stay",
+        name: "AvgStayDetail",
+        component: () => import("@/pages/AvgStayDetail.vue"),
+      },
+
+      {
         path: "/:pathMatch(.*)*",
         name: "NotFound",
         component: NotFound,
